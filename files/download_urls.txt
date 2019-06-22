@@ -33,3 +33,6 @@ https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip
 
 # OraOpenSource OOS Utils
 https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip
+
+# Oracle Multilingual Engine 
+https://download.oracle.com/otn/vm/mle/mle-docker-0.3.0.tar.gz
