@@ -52,6 +52,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [APEX Office Print 19.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
 * [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.22.1.zip)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64)
+* [Oracle Multilingual Engine 0.3.0](http://download.oracle.com/otn/vm/mle/mle-docker-0.3.0.tar.gz)
 
 **Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**
 
