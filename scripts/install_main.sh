@@ -92,6 +92,13 @@ if [ ${INSTALL_APEX} == "true" ]; then
     fi
 fi
 #
+if [ ${INSTALL_MLE} == "true" ]; then
+    #
+    echo "--------------------------------------------------"
+    echo "Installing ORACLE MLE............................"
+    ./scripts/install_mle.sh
+fi
+#
 if [ ${INSTALL_LOGGER} == "true" ]; then
     #
     echo "--------------------------------------------------"
