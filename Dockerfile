@@ -1,6 +1,6 @@
 FROM oraclelinux:7.6
 
-MAINTAINER Daniel Hochleitner <dhochleitner@posteo.de>
+MAINTAINER Mahmoud Rabie <mahmoudrabie2004@gmail.com>
 
 # environment variables
 ENV INSTALL_APEX=true \
@@ -24,7 +24,9 @@ ENV INSTALL_APEX=true \
     TOMCAT_HOME=/opt/tomcat \
     APEX_PASS=OrclAPEX1999! \
     APEX_ADDITIONAL_LANG= \
-    TIME_ZONE=UTC
+    TIME_ZONE=UTC \
+    INSTALL_MLE=true \
+    ORACLE_PDB=orclpdb 
 
 # copy all scripts
 ADD scripts /scripts/
