@@ -58,7 +58,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 
 3. **Customize some settings to reflect your needs (optional)**
 
-You can change some Environment Variables directly in the [Dockerfile](https://github.com/mahmoudrabie/apex-mle/Dockerfile):
+You can change some Environment Variables directly in the [Dockerfile](https://github.com/mahmoudrabie/apex-mle/blob/master/Dockerfile):
 
 ```bash
 INSTALL_APEX=true # Whether install Oracle APEX (Oracle ORDS / Apache Tomcat) or Not
