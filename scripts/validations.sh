@@ -57,6 +57,10 @@ if [ ! -f /scripts/install_tomcat.sh ]; then
     echo "/scripts/install_tomcat.sh not found!"
     exit 1
 fi
+if [ ! -f /scripts/install_mle.sh ]; then
+    echo "/scripts/install_mle.sh not found!"
+    exit 1
+fi
 if [ ! -f /scripts/setenv.sh ]; then
     echo "/scripts/setenv.sh not found!"
     exit 1
