@@ -18,6 +18,7 @@ This Docker Image contains the following:
 * OraOpenSource OOS Utils 1.0.1
 * APEX Office Print 19.x (Cloud Package)
 * Swagger-UI 3.x
+* Oracle Multilingual Engine 0.3.0
 
 ## Installation
 
