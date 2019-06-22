@@ -25,7 +25,6 @@ ENV INSTALL_APEX=true \
     APEX_PASS=OrclAPEX1999! \
     APEX_ADDITIONAL_LANG= \
     TIME_ZONE=UTC \
-    INSTALL_MLE=true \
     ORACLE_PDB=orclpdb 
 
 # copy all scripts
