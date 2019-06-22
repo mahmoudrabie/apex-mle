@@ -83,25 +83,26 @@ TOMCAT_HOME=/opt/tomcat # Path to TOMCAT_HOME Directory
 APEX_PASS=OrclAPEX1999! # Admin Password of Oracle APEX Web Login (Caution: Oracle APEX Password Policy)
 APEX_ADDITIONAL_LANG= # Additional Language of APEX, blank to only install English (e.g de, es, fr, it, ja, ko, pt-br, zh-cn, zh-tw)
 TIME_ZONE=UTC # Timezone of your favorite Location (Europe/Berlin, UTC, US/Eastern, ...) --> Only Linux zoneinfo supported
+ORACLE_PDB=orclpdb # UNCONFIGURED YET
 ```
 
 4. **Build the Docker Image**
 
 ```bash
-cd /path/to/docker-db-apex-dev
+cd /path/to/apex-mle
 docker build -t <your-docker-image-name> .
 # e.g
-docker build -t db-apex-dev-image .
+docker build -t apex-mle-image .
 ```
 
-*Note: Please be sure to have enough disk space left. Building this image needs around 40-50GB of free space. The successfully built image has a size of 15-16GB*
+*Note: Please be sure to have enough disk space left. Building this image needs around 50-60GB of free space. The successfully built image has a size of 20-25GB*
 
 5. **Run the Docker Container**
 
 ```bash
 docker run -d --name <your-docker-container-name> -p <local-ssh-port>:22 -p <local-http-port>:8080 -p <local-db-listener-port>:1521 -v /dev/shm --tmpfs /dev/shm:rw,nosuid,nodev,exec,size=2g <your-docker-image-name>
 # e.g
-docker run -d --name db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 -v /dev/shm --tmpfs /dev/shm:rw,nosuid,nodev,exec,size=2g db-apex-dev-image
+docker run -d --name apex-mle-container -p 2222:22 -p 8080:8080 -p 1521:1521 -v /dev/shm --tmpfs /dev/shm:rw,nosuid,nodev,exec,size=2g apex-mle-image
 ```
 
 *Note: /dev/shm should be equal the size of allocated Memory to the Database. /dev/shm must also be mounted as tmpfs.*
@@ -112,15 +113,15 @@ docker run -d --name db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 
 docker start <your-docker-container-name>
 docker stop <your-docker-container-name>
 # e.g
-docker start db-apex-dev-container
-docker stop db-apex-dev-container
+docker start apex-mle-container
+docker stop apex-mle-container
 ```
 
 ## Access To Services
 
 For this Docker Run Example and the **Default Environment Variables (Step 3)**:
 
-**docker run -d --name db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 -v /dev/shm --tmpfs /dev/shm:rw,nosuid,nodev,exec,size=2g db-apex-dev-image**
+**docker run -d --name apex-mle-container -p 2222:22 -p 8080:8080 -p 1521:1521 -v /dev/shm --tmpfs /dev/shm:rw,nosuid,nodev,exec,size=2g apex-mle-image**
 
 ### Oracle APEX
 
@@ -175,14 +176,14 @@ User | Password
 root | oracle
 oracle | oracle
 
-If you want to use SSH without a Password but rather with PubKey Authentication you have the place a **authorized_keys** file in the [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) directory before build.
+If you want to use SSH without a Password but rather with PubKey Authentication you have the place a **authorized_keys** file in the [files](https://github.com/mahmoudrabie/apex-mle/tree/master/files) directory before build.
 
 
 ## Credits
 This Dockerfile is based on the following work:
 
-- Philipp Salvisberg's GitHub Project [PhilippSalvisberg/docker-oracle12ee](https://github.com/PhilippSalvisberg/docker-oracle12ee)
-- Andrzej Raczkowski's GitHub Project [araczkowski/docker-oracle-apex-ords](https://github.com/araczkowski/docker-oracle-apex-ords)
+- Daniel's GitHub Project [Dani3lSun/docker-db-apex-dev](https://github.com/Dani3lSun/docker-db-apex-dev)
+
 
 ## License
 
