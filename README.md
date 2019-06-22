@@ -35,7 +35,7 @@ git clone https://github.com/mahmoudrabie/apex-mle.git
 2. **Download missing Software Components**
 
 Thus you have to agree to the License Agreement of Oracle for parts of this Docker Image, you have to download the Install Files by your own.
-You can take the direct Download Links from [download_urls.txt](https://github.com/Dani3lSun/docker-db-apex-dev/blob/master/files/download_urls.txt) in [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) directory.
+You can take the direct Download Links from [download_urls.txt](https://github.com/mahmoudrabie/apex-mle/blob/master/files/download_urls.txt) in [files](https://github.com/mahmoudrabie/apex-mle/blob/master/files) directory.
 
 **Direct Links:**
 
@@ -54,11 +54,11 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64)
 * [Oracle Multilingual Engine 0.3.0](http://download.oracle.com/otn/vm/mle/mle-docker-0.3.0.tar.gz)
 
-**Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**
+**Place all downloaded files in the** [files](https://github.com/mahmoudrabie/apex-mle/blob/master/files) **directory!**
 
 3. **Customize some settings to reflect your needs (optional)**
 
-You can change some Environment Variables directly in the [Dockerfile](https://github.com/Dani3lSun/docker-db-apex-dev/blob/master/Dockerfile):
+You can change some Environment Variables directly in the [Dockerfile](https://github.com/mahmoudrabie/apex-mle/Dockerfile):
 
 ```bash
 INSTALL_APEX=true # Whether install Oracle APEX (Oracle ORDS / Apache Tomcat) or Not
