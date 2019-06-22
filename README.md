@@ -29,7 +29,7 @@ Complete the following steps to create a new container:
 1. **Clone or Download the Github Repository to your local Machine**
 
 ```bash
-git clone https://github.com/Dani3lSun/docker-db-apex-dev.git
+git clone https://github.com/mahmoudrabie/apex-mle.git
 ```
 
 2. **Download missing Software Components**
