@@ -25,9 +25,8 @@ ENV INSTALL_APEX=true \
     TOMCAT_HOME=/opt/tomcat \
     APEX_PASS=OrclAPEX1999! \
     APEX_ADDITIONAL_LANG= \
-    TIME_ZONE=UTC \
-    ORACLE_PDB=orclpdb 
-
+    TIME_ZONE=UTC 
+    
 # copy all scripts
 ADD scripts /scripts/
 
